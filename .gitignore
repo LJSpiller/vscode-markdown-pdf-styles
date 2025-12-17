@@ -1,0 +1,19 @@
+# ----------------------------------------
+# VS Code Markdown PDF Extension Artifacts
+# ----------------------------------------
+
+# Ignore temporary HTML files generated before PDF conversion
+*.html
+
+# Ignore temporary files used by the extension
+*.lock
+
+# ----------------------------------------
+# General Editor/OS Configuration
+# ----------------------------------------
+
+# VS Code specific settings (usually safe to ignore)
+.vscode/
+
+# macOS directory service files
+.DS_Store
