@@ -1,4 +1,10 @@
-# Export styled Markdown to PDF for technical writing
+# vscode-markdown-pdf-styles
+![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)
+![Made with VS Code](https://img.shields.io/badge/Made%20with-VS%20Code-blue?logo=visual-studio-code)
+
+Tutorial and assets to create styled PDFs from Markdown in Visual Studio Code.
+
+## Export styled Markdown to PDF for technical writing
 
 Using Visual Studio Code is great for working with code samples, but raw Markdown files aren't usually an acceptable file format for final portfolio samples or shareable work documents.
 
