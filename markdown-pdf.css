@@ -1,0 +1,231 @@
+/* ===========================
+   General body text
+   =========================== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;        /* Test color - change to 333 for testing and restore to black after setup */
+  margin: 20px;
+}
+
+/* ===========================
+   Headings & Page Break Control (Avoid break *after* heading)
+   =========================== */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #222;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  page-break-after: avoid;
+}
+
+/* ===========================
+   Inline code (paragraphs, lists, tables)
+   =========================== */
+p code,
+li code,
+td code,
+th code {
+  background-color: #f5f7fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 90%;
+  color: #333 !important;   /* force dark gray inline code */
+  display: inline;
+}
+
+/* ===========================
+   Code blocks (Standard)
+   =========================== */
+pre {
+  font-family: Consolas, "Courier New", monospace;
+  background-color: #f5f7fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  position: relative;
+  padding: 6px 10px;
+  overflow-x: auto;
+  color: #2a2a2a;
+  margin: 1em 0;
+  
+  /* Prevent code blocks from splitting across pages */
+  page-break-inside: avoid; 
+}
+
+/* =======================================
+   Header Gap Fix (Code Block Label)
+   ======================================= */
+
+/* 1. Style the H4 to look like a clean label bar */
+h4:has(+ pre) { 
+  background-color: #343a40; /* Dark gray background */
+  color: #f8f9fa;            /* Light text color */
+  padding: 5px 10px;
+  margin-bottom: 0;          /* Remove space between H4 and <pre> */
+  margin-top: 1.5em;         /* Restore standard top spacing */
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* 2. Snap the code block up to remove the gap and align the borders */
+h4 + pre {
+  margin-top: 0;                  /* Pull the code block up */
+  border-top-left-radius: 0;      /* Align corners with the H4 bar */
+  border-top-right-radius: 0;
+}
+
+
+/* ===========================
+   Tables & Page Break Control
+   =========================== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  
+  /* Prevent tables from splitting across pages */
+  page-break-inside: avoid; 
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+th {
+  background-color: #f0f2f5;
+  font-weight: 600;
+}
+
+/* ===========================
+   Lists
+   =========================== */
+ol {
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding-left: 2em;
+}
+ul {
+  list-style-position: outside;
+  margin: 0 0 1em 0;
+  padding-left: 1.5em;
+}
+ol ol, ul ul {
+  margin: 0.5em 0;
+  padding-left: 2em;
+}
+
+/* ===========================
+   Links
+   =========================== */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Blockquotes (Callouts) & Page Break Control
+   =========================== */
+blockquote {
+  border-left: 4px solid #0066cc;
+  background-color: #f5f7fa;
+  padding: 10px 15px;
+  margin: 1em 0;
+  color: #333;
+  font-style: normal;
+  border-radius: 4px;
+  
+  /* Prevent callout boxes from splitting across pages */
+  page-break-inside: avoid; 
+}
+
+/* NOTE, WARNING, CAUTION, SUCCESS, INFO, TIP (Callout Styles) */
+blockquote.note { border-left-color: #0066cc; background-color: #e9f2fb; }
+blockquote.note::before { content: "📘 NOTE:"; font-weight: 700; color: #0066cc; display: block; margin-bottom: 4px; font-family: "Segoe UI Emoji","Noto Color Emoji","Segoe UI",Arial,sans-serif; }
+
+/* WARNING */
+blockquote.warning { border-left-color: #dc3545; background-color: #fbeaea; }
+blockquote.warning::before { content: "❗ WARNING:"; font-weight: 700; color: #dc3545; display: block; margin-bottom: 4px; font-family: "Segoe UI Emoji","Noto Color Emoji","Segoe UI",Arial,sans-serif; }
+
+/* CAUTION */
+blockquote.caution { border-left-color: #ffcc00; background-color: #fffbe6; }
+blockquote.caution::before { content: "⚠️ CAUTION:"; font-weight: 700; color: #ffab00; display: block; margin-bottom: 4px; font-family: "Segoe UI Emoji","Noto Color Emoji","Segoe UI",Arial,sans-serif; }
+
+/* SUCCESS */
+blockquote.success { border-left-color: #28a745; background-color: #e9f7ef; }
+blockquote.success::before { content: "✅ SUCCESS:"; font-weight: 700; color: #28a745; display: block; margin-bottom: 4px; font-family: "Segoe UI Emoji","Noto Color Emoji","Segoe UI",Arial,sans-serif; }
+
+/* INFO */
+blockquote.info { border-left-color: #17a2b8; background-color: #e8f6f9; }
+blockquote.info::before { content: "ℹ️ INFO:"; font-weight: 700; color: #17a2b8; display: block; margin-bottom: 4px; font-family: "Segoe UI Emoji","Noto Color Emoji","Segoe UI",Arial,sans-serif; }
+
+/* TIP */
+blockquote.tip { border-left-color: #20c997; background-color: #e6f9f5; }
+blockquote.tip::before { content: "💡 TIP:"; font-weight: 700; color: #20c997; display: block; margin-bottom: 4px; font-family: "Segoe UI Emoji","Noto Color Emoji","Segoe UI",Arial,sans-serif; }
+
+
+/* ===========================
+   Horizontal rules
+   =========================== */
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 2em 0;
+}
+
+/* ===========================
+   Images
+   =========================== */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 1em 0;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  
+  /* Prevent images from splitting across pages */
+  page-break-inside: avoid; 
+}
+img[src*="#bordered"] {
+  border: 1px solid #888;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* ===========================
+   Status codes (red/green circles)
+   =========================== */
+.status-ok::before {
+  content: "🟢";
+  font-family: "Segoe UI Emoji","Noto Color Emoji";
+  margin-right: 0.25em;
+  vertical-align: top;
+}
+
+.status-error::before {
+  content: "🔴";
+  font-family: "Segoe UI Emoji","Noto Color Emoji";
+  margin-right: 0.25em;
+  vertical-align: top;
+}
+
+.status-ok,
+.status-error {
+  font-weight: 700;
+}
+
+/* =======================================
+   MANUAL PAGE BREAK CLASS 
+   ======================================= */
+.new-page {
+  /* This is the key CSS property for forcing a break in PDF/Print - use sparingly*/
+  page-break-after: always;
+}
