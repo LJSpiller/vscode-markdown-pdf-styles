@@ -28,7 +28,10 @@ This repository demonstrates the solution in action. The `tutorial.pdf` file sho
 * **Custom status codes** (Green/red circle emojis)
 * **Manual page breaks**
 
-**[View the final styled PDF](tutorial.pdf).**
+**[View](tutorial.pdf)** the final styled PDF or **[download](tutorial.pdf?raw=true)** the final styled PDF.
+
+For best results, download and open the PDF locally in Acrobat or a browser.  
+GitHub’s preview may not display all formatting correctly.
 
 *This PDF is the primary artifact of this repository and demonstrates all of the custom formatting.*
 
