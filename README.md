@@ -36,3 +36,10 @@ This repository demonstrates the solution in action. The `tutorial.pdf` file sho
 | **`markdown-pdf.css`** | The custom style sheet required to generate the styled output. |
 | **`markdown-to-pdf-demo.md`** | A demonstration file showing all of the styles and code snippets for major languages in action. |
 | **`tutorial.pdf`** | The final styled PDF. |
+
+
+## License
+
+This tutorial and its assets are licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+You may share this work with attribution for non-commercial purposes, but you may not remix or reuse it in derivative works.
